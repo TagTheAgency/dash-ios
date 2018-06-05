@@ -10,8 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var imgV: UIImageView!
+    
+    var currentIndex = 0;
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        imgV.image = randomDashImage()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -21,5 +26,50 @@ class ViewController: UIViewController {
     }
 
 
+    let dashImagesArray = [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10",
+        "11",
+        "12",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18",
+        "19",
+        "20",
+        "21",
+        "22",
+        "23",
+        "24",
+        "25"
+        ]
+    
+    func randomDashImage() -> UIImage {
+        let unsignedArrayCount = UInt32(dashImagesArray.count)
+        let unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
+        let randomNumber = Int(unsignedRandomNumber)
+        
+        if (randomNumber == currentIndex) {
+            return randomDashImage()
+        }
+        
+        currentIndex = randomNumber
+        
+        return UIImage(named: dashImagesArray[randomNumber])!
+    }
+    
+    @IBAction func showDashImage() {
+        imgV.image = randomDashImage()
+    }
 }
 
