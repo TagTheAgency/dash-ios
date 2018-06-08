@@ -18,13 +18,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rV8-ih-cIC">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rV8-ih-cIC">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dash logo-1" translatesAutoresizingMaskIntoConstraints="NO" id="Idi-Rn-VIE">
+                                        <rect key="frame" x="100" y="304" width="175" height="58"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="58" id="200-q3-Bn2"/>
+                                            <constraint firstAttribute="width" constant="175" id="VzG-VT-0wH"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="By TAG The Agency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1EY-mF-7JG">
+                                        <rect key="frame" x="110" y="385" width="154" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.96078431369999995" green="0.92941176469999998" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Idi-Rn-VIE" firstAttribute="centerY" secondItem="rV8-ih-cIC" secondAttribute="centerY" id="CVi-yF-8by"/>
+                                    <constraint firstItem="Idi-Rn-VIE" firstAttribute="centerX" secondItem="rV8-ih-cIC" secondAttribute="centerX" id="SCL-WE-uLJ"/>
+                                    <constraint firstItem="1EY-mF-7JG" firstAttribute="centerX" secondItem="Idi-Rn-VIE" secondAttribute="centerX" id="Wgy-Ao-yYU"/>
+                                    <constraint firstItem="1EY-mF-7JG" firstAttribute="top" secondItem="Idi-Rn-VIE" secondAttribute="bottom" constant="23" id="knm-D6-PPI"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rV8-ih-cIC" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="29J-Ac-MtL"/>
+                            <constraint firstItem="rV8-ih-cIC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HeW-Vp-RNK"/>
+                            <constraint firstItem="rV8-ih-cIC" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="QfJ-sp-ZNQ"/>
+                            <constraint firstItem="rV8-ih-cIC" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="R6G-z9-qZv"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,4 +59,7 @@
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="dash logo-1" width="687" height="241"/>
+    </resources>
 </document>
